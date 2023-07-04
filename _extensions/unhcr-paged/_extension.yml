@@ -9,6 +9,5 @@ contributes:
       include-in-header:
         - text: |
             <script src="_extensions/unhcr-paged/paged.polyfill.min.js"></script>
-        - text: |
-            <link href="_extensions/unhcr-paged/interface.css" rel="stylesheet" type="text/css" />
       minimal: true
+      css: interface.css

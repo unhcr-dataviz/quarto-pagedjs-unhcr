@@ -1,8 +1,147 @@
 /*-- scss:defaults --*/
 
-/* TODO: Customize html appearance by setting SCSS variables */
-/* See https://quarto.org/docs/output-formats/html-themes.html#theme-options */
+// UNHCR colors
+$unhcr-blue: #0072BC;
+$unhcr-white: #FFFFFF;
+$unhcr-black: #000000;
+$unhcr-yellow: #FAEB00;
+$unhcr-grey: #666666;
+$unhcr-navy: #18375F;
+$unhcr-green: #00B398;
+$unhcr-red: #EF4A60;
+$unhcr-lightgrey: #E6E6E6;
+$unhcr-mediumgrey: #CCCCCC;
+$unhcr-darkgrey: #222222;
+
+
+// Bootstrap default variable overrides
+
+// Grays
+$gray-100: #f2f2f2;
+$gray-200: $unhcr-lightgrey;
+$gray-300: $unhcr-mediumgrey;
+$gray-400: #b3b3b3;
+$gray-500: #999999;
+$gray-600: $unhcr-grey;
+$gray-700: #4d4d4d;
+$gray-800: #333333;
+$gray-900: $unhcr-darkgrey;
+
+// Main
+$blue: $unhcr-blue;
+$yellow: $unhcr-yellow;
+$green: $unhcr-green;
+$red: $unhcr-red;
+$orange: #f9a24a;
+
+// Theme
+$info: #338ec9;
+$warning: $unhcr-yellow;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro&display=swap');
+$font-family-base: 'Lato', Arial, sans-serif;
+$font-family-code: 'Source Code Pro', monospace;
+// $font-size-base: .9rem;
+$body-color: $unhcr-black;
+$headings-font-weight: 700;
+$headings-color: $unhcr-black;
+$code-color: $unhcr-red;
+$lead-font-weight: 400;
+
+// Link
+$link-decoration: none;
+$link-hover-color: $unhcr-blue;
+$link-hover-decoration: none;
+
+// Type
+$mark-bg: #FFF9CB;
 
 /*-- scss:rules --*/
 
-/* TODO: Provide custom CSS rules */
+// Headings
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    font-weight: 400;
+    color: $unhcr-blue;
+}
+
+h2,
+.h2 {
+    border-bottom: none;
+}
+
+// Lists
+li::marker {
+    color: $unhcr-blue;
+}
+
+// Footnotes
+.citation a,
+.footnote-ref {
+    font-weight: 600;
+}
+
+
+// Page size
+@page {
+    size: A4;
+    margin: 45mm 25mm 25mm 25mm;
+}
+
+@page: blank {}
+
+@page {
+    // background-image: url("_extensions/unhcr-paged/unhcr_logo_blue.svg");
+    // background-repeat: no-repeat;
+    // background-position: 15mm 10mm;
+    // background-size: 36mm;
+
+    @top-left {
+        content: url("_extensions/unhcr-paged/unhcr_logo_blue.svg");
+        zoom: 50%;
+    }
+
+    // @top-right {
+    //     content: "";
+    // }
+
+    @bottom-left {
+        content: "www.unhcr.org";
+        font-size: 0.85rem;
+        color: $unhcr-blue;
+        border-top: 0.5px solid $unhcr-blue;
+        vertical-align: top;
+        padding-top: 1.5mm;
+        margin-left: -10mm;
+        margin-top: 10mm;
+    }
+
+    @bottom-right {
+        content: counter(page);
+        font-size: 0.85rem;
+        color: $unhcr-blue;
+        border-top: 0.5px solid $unhcr-blue;
+        vertical-align: top;
+        padding-top: 1.5mm;
+        margin-right: -10mm;
+        margin-top: 10mm;
+    }
+}
+
+.level1 {
+    break-before: page;
+}
+
+.section>h1,
+.section>h2,
+.section>h3,
+.section>h4,
+.section>h5,
+.section>h6 {
+    break-after: avoid;
+}
