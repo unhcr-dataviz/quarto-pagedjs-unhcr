@@ -6,3 +6,4 @@
 /.quarto/
 template.html
 template_files/
+/.luarc.json

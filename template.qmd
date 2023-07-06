@@ -305,7 +305,7 @@ Use the `knitr::kable()` function to insert simple already stylized tables. For 
 knitr::kable(head(idp))
 ```
 
-# Source code
+# Source code 
 
 To include code, use fenced code blocks with a language specifier. By default the `echo` parameter of code block is set to true, turn it to `false` to hide the code in the document.
 
