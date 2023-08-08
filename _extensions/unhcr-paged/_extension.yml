@@ -5,9 +5,6 @@ quarto-required: ">=1.3.0"
 contributes:
   formats:
     html:
+      filters: [pagedjs.lua]
       theme: [default, pagedjs.scss]
-      include-in-header:
-        - text: |
-            <script src="_extensions/unhcr-paged/paged.polyfill.min.js"></script>
       minimal: true
-      css: interface.css
