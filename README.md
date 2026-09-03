@@ -7,7 +7,7 @@ A [Quarto](https://quarto.org/) extension to create [UNHCR branded](https://www.
 To start a new `Paged HTML` document:
 
 ```bash
-quarto use template unhcr-dataviz/quarto-pagedjs-unhcr
+quarto use template vidonne/quarto-pagedjs-unhcr
 ```
 
 This will install the extension and create an example qmd file that you can use as a starting place for your report.
